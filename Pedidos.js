@@ -59,7 +59,7 @@ function AgregarPedido(){
         type: 'POST',
         data: datospedidosjson,
         datatype: 'JSON',
-
+        contentType: 'application/json',
         success: function(response){
             console.log(response);
         }
@@ -80,7 +80,7 @@ function CargarPedido(IdPedido){
         type: 'POST',
         data: datospedidojson,
         datatype: 'JSON',
-
+        contentType: 'application/json',
         success: function(response){
             var MiItems = response;
             $('#ID_SOCIO').val(MiItems[0].ID_SOCIO);
@@ -117,7 +117,7 @@ function ActualizarPedido(IdPedido){
         type: 'PUT',
         data: datospedidosjson,
         datatype: 'JSON',
-        
+        contentType: 'application/json',
         success: function(response){
             console.log(response);
         }
@@ -137,6 +137,7 @@ function EliminarPedido(IdPedido){
         type: 'DELETE',
         data: datospedidojson,
         datatype: 'JSON',
+        contentType: 'application/json',
         success: function(response){
             console.log(response);
         }
